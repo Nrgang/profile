@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+/*
+.container{
+    
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+*/
+
+
+
+
+
+body{
+    
+    background: linear-gradient(160deg, #fff, #202020 ) fixed;
+}
+
+.content{
+    width: 100%;
+    height: 830px;
+}
+
+.bag{
+    
+    text-align: center;
+    position: relative;
+    
+}
+
+#bag-img{
+    
+    position: absolute;
+    top: 15%;
+    left: 24%;
+    right: 300px;
+    z-index: 1;
+    
+}
+
+#earphone-img{
+    
+    position: absolute;
+    bottom: 0px;
+    right: -200px;
+    z-index: 2;
+    
+    transform: rotate(0deg);
+/*    visibility: hidden;*/
+    
+}
+
+#note-img{
+    
+    position: absolute;
+    top: 400px;
+    left: 70%;
+    right: 20px;
+    z-index: 2;
+    
+    transform: rotate(0deg);
+    
+/*    visibility: hidden;*/
+}
+
+#dumbbell-img {
+    
+    position: absolute;
+    top: 64px;
+    left: 64%;
+    right: 20px;
+    z-index: 2;
+    
+    transform: rotate(0deg);
+    
+/*    visibility: hidden;*/
+    
+}
+
+#phone-img{
+    position: absolute;
+    top: 400px;
+    left: 4%;
+    right: 20px;
+    z-index: 2;
+    
+    transform: rotate(0deg);
+    
+/*    visibility: hidden;*/
+}
+
+#box-earphone {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  top: 100px;
+  left: 100px;
+  background-color: #000;
+  transform: rotate(0deg);
+}
+#box-note{
+    position: relative;
+}
+#box-dumbbell{
+    position: relative;
+}
+#box-phone{
+    position: relative;
+}
+
+#earphone{
+    
+/*    background-color: rgba( 79, 87, 170, 0.64 );*/
+    background-image: url(../image/electroBack.jpg)
+    
+}
+
+#earphone h2{
+    color: gainsboro;
+}
+
+#phone{
+    
+    background-color: rgba( 128, 191, 32, 0.64 );
+    background-image: url(../image/android.jpg);
+    background-size: 1450px;
+    
+}
+
+#phone h2{
+    color: #a4c639;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.android-disp{
+    margin-left: 70px;
+}
+
+.android-sent{
+    float: right;
+    text-align: center;
+    margin-top: 200px;
+    margin-right: 250px;
+}
+
+#dumbbell{
+    
+    background-color: rgba( 114, 129, 139, 0.64 );
+    background-image: url(../image/muscle.jpg);
+    background-size: 1600px;
+    
+}
+
+#dumbbell h2{
+    color: #ccc;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.train-sent{
+    float: left;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 250px;
+    
+    color: #ddd;
+}
+
+#textbook{
+    
+    background-color: rgba( 143, 0, 72, 0.64 );
+    background-image: url(../image/study.jpeg);
+    background-size: 1600px;
+    
+}
+
+
+/*
+.motion {
+    visibility: visible;
+    animation: rotate_top 2s;
+}
+@keyframes rotate_top {
+    0% {
+   transform: rotate(0deg) translateY(-10%) rotate(0deg);
+  }
+    100% {
+    transform: rotate(360deg) translateY(-10%) rotate(-360deg);
+  }
+}
+*/
+
+
+
+.anime {
+  animation: arc1 3s ease 1;
+}
+.anime2 {
+  animation: arc2 3s ease 1;
+}
+
+@keyframes arc1{
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(180deg)}
+}
+@keyframes arc2{
+  0%{transform: rotate(180deg)}
+  100%{transform: rotate(0deg)}
+}
+
+
+.box{
+    
+    margin: 20px 0 0;
+    
+}
+
+.ytp{
+    
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.left{
+    float: left;
+    background-color: #fff;
+}
+
+.left:hover {
+    background-blend-mode:overlay;
+}
+
+.mcontent{
+    width: 260px;
+    height: 170px;
+    margin-left: 23px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.mcontent p{
+    text-align: center;
+    color:gainsboro;
+}
+
+.white{
+    width: 260px;
+    height: 146.25px;
+}
+
+.cover{
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
