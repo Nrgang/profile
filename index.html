@@ -1,286 +1,144 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style.css">
-    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <script src="./js/smooth-scroll.js"></script>
-    <title>プロフィール</title>
-    
-</head>
-<body>
-  
-  <div>
-       
-       <div class="content bag">
-          
-          <img src="./image/bag-closed.png" alt="" width="600px" id="bag-img">
-          
-           <div id="box-earphone">
-               <a href="#earphone" data-scroll>
-                   <img src="./image/earphone.png" alt="" width="200px" id="earphone-img">
-               </a>
-           </div>
-           
-          <a href="#textbook" data-scroll><img src="./image/note.png" alt="" width="300px" id="note-img"></a>
-          
-          <a href="#dumbbell" data-scroll><img src="./image/dumbbell.png" alt="" width="200px" id="dumbbell-img"></a>
-          
-          <a href="#phone" data-scroll><img src="./image/phone-dam.png" alt="" width="300px" id="phone-img"></a>
-          
-       </div>
-           
-           <script>
-               
-               var $earphone = $('#earphone-img');
-               var $note = $('#note-img');
-               var $dumbbell = $('#dumbbell-img');
-               var $phone = $('#phone-img')
-               
-               var $boxE = $('#box-earphone');
-               var $boxN = $('#box-note');
-               var $boxD = $('#box-dumbbell')
-               var $boxP = $('#box-phone');
-               
-           $(function() {
-           $('#bag-img')
-               .click(function() {
-//               $('#earphone-img').toggle();
-//               $('#note-img').toggle();
-//               $('#dumbbell-img').toggle();
-//               $('#phone-img').toggle();
-               $boxE.toggleClass('anime');
-               $boxN.toggleClass('anime');
-               $boxD.toggleClass('anime');
-               $boxP.toggleClass('anime');
-               $boxE.toggleClass('anime2');
-               $boxN.toggleClass('anime2');
-               $boxD.toggleClass('anime2');
-               $boxP.toggleClass('anime2');
-               $("#box-earphone").toggleClass('anime');
-               if($('#box-earphone').hasClass("anime")) {
-                   $boxE.animate({
-                       transform : "rotate("+ 180 + "deg)"
-                   });
-               }
-               
-               if($('#earphone-img').hasClass('anime')){
-                   $boxE.css({
-                       transform : "rotate("+ 0 + "deg)" 
-                   })
-                   $boxN.css({
-                       transform : "rotate("+ 180 + "deg)" 
-                   })
-                   $boxD.css({
-                       transform : "rotate("+ 180 + "deg)" 
-                   })
-                   $boxP.css({
-                       transform : "rotate("+ 180 + "deg)" 
-                   });
-               }else{
-                   $boxE.css({
-                       transform : "rotate("+ 180 + "deg)" 
-                   })
-                   $boxN.css({
-                       transform : "rotate("+ 0 + "deg)" 
-                   })
-                   $boxD.css({
-                       transform : "rotate("+ 0 + "deg)" 
-                   })
-                   $boxP.css({
-                       transform : "rotate("+ 0 + "deg)" 
-                   });
-               } 
-           })
-           
-           // マウスポインターが画像に乗った時の動作
-               .mouseover(function() {
-               
-               $(this).attr('src', './image/bag-open.png');
-               
-           })
-           
-           // マウスポインターが画像から外れた時の動作
-               .mouseout(function() {
-               
-               $(this).attr('src', './image/bag-closed.png');
-               
-           });
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="css/style.css">
+      <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+      <script type="text/javascript" src="script.js"></script>
+      <script src="./js/smooth-scroll.js"></script>
+      <script type="./js/index.js"></script>
+      <title>プロフィール</title>
+  </head>
+  <body>
+    <div>
+         <div class="content bag">
+            <img src="./image/bag-closed.png" alt="" width="600px" id="bag-img">
+             <div id="box-earphone">
+                 <a href="#earphone" data-scroll>
+                     <img src="./image/earphone.png" alt="" width="200px" id="earphone-img">
+                 </a>
+             </div>
+            <a href="#textbook" data-scroll><img src="./image/note.png" alt="" width="300px" id="note-img"></a>
+            <a href="#dumbbell" data-scroll><img src="./image/dumbbell.png" alt="" width="200px" id="dumbbell-img"></a>
+            <a href="#phone" data-scroll><img src="./image/phone-dam.png" alt="" width="300px" id="phone-img"></a>
+         </div> 
+         <div class="content" id="earphone">
+            <h2>My Favorite Songs</h2>
+             <p class="ytp"><iframe class="box" width="640" height="360" src="https://www.youtube.com/embed/ih2xubMaZWI" frameborder="0" allowfullscreen id="box"></iframe></p>
+                 <div class="mcontent" aline="left">
+                     <a href="#earphone">
+                         <div class="white">
+                         <img src="./image/hello.jpg" alt="" width="260px" class="music-1 left">
+                         <div class="cover">
+                             </div>
+                         </div>
+                     </a>
+                     <p>OMFG - Hello</p>
+                 </div>
+                 <div class="mcontent">
+                 <a href="#earphone" class="hover_img2">
+                 <img src="./image/unity.jpg" alt="" width="260px" class="music-2 left">
+                     </a>
+                     <p>TheFatRat - Unity</p>
+                 </div>
+                 <div class="mcontent">
+                 <a href="#earphone" class="hover_img2">
+                 <img src="./image/monody.jpg" alt="" width="260px" class="music-3 left">
+                     </a>
+                     <p>TheFatRat - Monody</p>
+                 </div>
+                 <div class="mcontent">
+                 <a href="#earphone" class="hover_img2">
+                 <img src="./image/neverBeAlone.jpg" alt="" width="260px" class="music-4 left">
+                     </a>
+                     <p>TheFatRat - Never Be Alone</p>
+                 </div>
+                 
+                 <div class="mcontent">
+                    <a href="#earphone" class="hover_img2">
+                     <img src="./image/energyDrink.jpg" alt="" width="260px" class="music-9 left">
+                     </a>
+                     <p>Virtual Riot-Energy Drink</p>
+                 </div>
+                 
+                 <div class="mcontent">
+                 <a href="#earphone" class="hover_img2">
+                 <img src="./image/fade.jpg" alt="" width="260px" class="music-5 left">
+                     </a>
+                     <p>Alan Walker - Fade</p>
+                 </div>
+                 
+                 <div class="mcontent">
+                   <a href="#earphone" class="hover_img2">
+                    <img src="./image/nova.jpg" alt="" width="260px" class="music-6 left">
+                     </a>
+                     <p>Ahrix - Nova</p>
+                     </div>
+                     
+                  <div class="mcontent">
+                   <a href="#earphone" class="hover_img2">
+                    <img src="./image/spectre.jpg" alt="" width="260px" class="music-7 left">
+                      </a>
+                     <p>Alan Walker - Spectre</p>
+                 </div>
+                 
+                 <div class="mcontent">
+                   <a href="#earphone" class="hover_img2">
+                    <img src="./image/force.jpg" alt="" width="260px" class="music-8 left">
+                     </a>
+                     <p>Alan Walker - Force</p>
+                 </div>
+                 
+                 <div class="mcontent">
+                    <a href="#earphone" class="hover_img2">
+                     <img src="./image/sunburst.jpg" alt="" width="260px" class="music-10 left">
+                     </a>
+                     <p>Tobu ＆ Itro - Sunburst</p>
+                 </div>
+         </div>
+         
+         <div class="content" id="phone">
             
-           });
-           
-               
-           </script>
-           
-       
-       
-       <div class="content" id="earphone">
-          
-          <h2>My Favorite Songs</h2>
-          
-          
-           <p class="ytp"><iframe class="box" width="640" height="360" src="https://www.youtube.com/embed/ih2xubMaZWI" frameborder="0" allowfullscreen id="box"></iframe></p>
-              
-               <div class="mcontent" aline="left">
-                   <a href="#earphone">
-                      
-                       <div class="white">
-                       <img src="./image/hello.jpg" alt="" width="260px" class="music-1 left">
-                       <div class="cover">
-                           </div>
-                       </div>
-                       
-                   </a>
-                   <p>OMFG - Hello</p>
-               </div>
-               
-               <div class="mcontent">
-               <a href="#earphone" class="hover_img2">
-               <img src="./image/unity.jpg" alt="" width="260px" class="music-2 left">
-                   </a>
-                   <p>TheFatRat - Unity</p>
-               </div>
-               
-               <div class="mcontent">
-               <a href="#earphone" class="hover_img2">
-               <img src="./image/monody.jpg" alt="" width="260px" class="music-3 left">
-                   </a>
-                   <p>TheFatRat - Monody</p>
-               </div>
-               
-               <div class="mcontent">
-               <a href="#earphone" class="hover_img2">
-               <img src="./image/neverBeAlone.jpg" alt="" width="260px" class="music-4 left">
-                   </a>
-                   <p>TheFatRat - Never Be Alone</p>
-               </div>
-               
-               <div class="mcontent">
-                  <a href="#earphone" class="hover_img2">
-                   <img src="./image/energyDrink.jpg" alt="" width="260px" class="music-9 left">
-                   </a>
-                   <p>Virtual Riot-Energy Drink</p>
-               </div>
-               
-               <div class="mcontent">
-               <a href="#earphone" class="hover_img2">
-               <img src="./image/fade.jpg" alt="" width="260px" class="music-5 left">
-                   </a>
-                   <p>Alan Walker - Fade</p>
-               </div>
-               
-               <div class="mcontent">
-                 <a href="#earphone" class="hover_img2">
-                  <img src="./image/nova.jpg" alt="" width="260px" class="music-6 left">
-                   </a>
-                   <p>Ahrix - Nova</p>
-                   </div>
-                   
-                <div class="mcontent">
-                 <a href="#earphone" class="hover_img2">
-                  <img src="./image/spectre.jpg" alt="" width="260px" class="music-7 left">
-                    </a>
-                   <p>Alan Walker - Spectre</p>
-               </div>
-               
-               <div class="mcontent">
-                 <a href="#earphone" class="hover_img2">
-                  <img src="./image/force.jpg" alt="" width="260px" class="music-8 left">
-                   </a>
-                   <p>Alan Walker - Force</p>
-               </div>
-               
-               <div class="mcontent">
-                  <a href="#earphone" class="hover_img2">
-                   <img src="./image/sunburst.jpg" alt="" width="260px" class="music-10 left">
-                   </a>
-                   <p>Tobu ＆ Itro - Sunburst</p>
-               </div>
-           
-       </div>
-       
-       <script>
-           
-           $(function(){
-	       $(".music-1").on("click",function(){
-  	       $("#box").attr("src","https://www.youtube.com/embed/ih2xubMaZWI")
-           });
-           $(".music-2").on("click",function(){
-  	       $("#box").attr('src','https://www.youtube.com/embed/n8X9_MgEdCg')
-           });
-           $(".music-3").on("click",function(){
-  	       $(".box").attr("src","https://www.youtube.com/embed/B7xai5u_tnk")
-           });
-           $(".music-4").on("click",function(){
-  	       $(".box").attr("src","https://www.youtube.com/embed/Ic-gZlPFTkQ")
-           });
-           $(".music-5").on("click",function(){
-  	       $(".box").attr("src","https://www.youtube.com/embed/bM7SZ5SBzyY")
-           });    
-           $(".music-6").on("click",function(){
-  	       $(".box").attr("src","https://www.youtube.com/embed/FjNdYp2gXRY")
-           });    
-           $(".music-7").on("click",function(){
-  	       $(".box").attr("src","https://www.youtube.com/embed/AOeY-nDp7hI")
-           });    
-           $(".music-8").on("click",function(){
-  	       $(".box").attr("src","https://www.youtube.com/embed/xshEZzpS4CQ")
-           });    
-           $(".music-9").on("click",function(){
-  	       $(".box").attr("src","https://www.youtube.com/embed/5IOVkstxkdE")
-           });
-           $(".music-10").on("click",function(){
-  	       $(".box").attr("src","https://www.youtube.com/embed/1-0-4HqyvXE")
-           });    
-           });
-           
-       </script>
-       
-       <div class="content" id="phone">
-          
-          <h2>Android Apps Development</h2>
-          
-          <img src="./image/android-phone.png" alt="" height="830" class="android-disp">
-          
-          <div class="android-sent">
-          <h3>Androd Development</h3>
-          <p>水曜日！！</p>
-           </div>
-           
-       </div>
-       
-       <div class="content" id="dumbbell">
-          
-              <h2>Training</h2>
-          <div class="train-sent">
-          <h3>afafasfasd</h3></h2>
-          <p>fsdbaisdaofnaoi</p>
-          </div>
-           
-       </div>
-       
-       <div class="content" id="textbook">
-          
-          <h2>School Works</h2>
-          
-          <p></p>
-           
-       </div>
+            <h2>Android Apps Development</h2>
+            
+            <img src="./image/android-phone.png" alt="" height="830" class="android-disp">
+            
+            <div class="android-sent">
+            <h3>Androd Development</h3>
+            <p>水曜日！！</p>
+             </div>
+             
+         </div>
+         
+         <div class="content" id="dumbbell">
+            
+                <h2>Training</h2>
+            <div class="train-sent">
+            <h3>afafasfasd</h3></h2>
+            <p>fsdbaisdaofnaoi</p>
+            </div>
+             
+         </div>
+         
+         <div class="content" id="textbook">
+            
+            <h2>School Works</h2>
+            
+            <p></p>
+             
+         </div>
+     </div>
+     
    </div>
-   
- </div>
-  
-  <script>
-	// スムーススクロールを起動する
-	smoothScroll.init({
-        speed: 1000,
-        easing: 'easeInOutCubic',
-        offset: 0,
-    }) ;
-      
-</script>
-   
     
-</body>
-</html>
+    <script>
+    	// スムーススクロールを起動する
+    	smoothScroll.init({
+            speed: 1000,
+            easing: 'easeInOutCubic',
+            offset: 0,
+        }) ;
+    </script>
+     
+  </body>
+  </html>
