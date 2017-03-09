@@ -139,24 +139,6 @@ body{
     background-image: url(../image/study.jpeg);
     background-size: 1600px;
 }
-
-.anime {
-  animation: arc1 3s ease 1;
-}
-.anime2 {
-  animation: arc2 3s ease 1;
-}
-
-@keyframes arc1{
-  0%{transform: rotate(0deg)}
-  100%{transform: rotate(180deg)}
-}
-@keyframes arc2{
-  0%{transform: rotate(180deg)}
-  100%{transform: rotate(0deg)}
-}
-
-
 .box{
     
     margin: 20px 0 0;
@@ -194,5 +176,21 @@ body{
 .white{
     width: 260px;
     height: 146.25px;
+}
+
+.anime {
+  animation: arc1 3s ease 1;
+}
+.anime2 {
+  animation: arc2 3s ease 1;
+}
+
+@keyframes arc1{
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(180deg)}
+}
+@keyframes arc2{
+  0%{transform: rotate(180deg)}
+  100%{transform: rotate(0deg)}
 }
 
